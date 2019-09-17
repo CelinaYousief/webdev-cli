@@ -9,9 +9,9 @@ I will get an installation script going eventually but for now:
 
 Copy ```webdev``` into one of the following:
 
-  ```$HOME/bin``` for access by your user only.
+* ```$HOME/bin``` for access by your user only.
 
-  ```/usr/local/bin``` for access by all local users.
+* ```/usr/local/bin``` for access by all local users.
 
-  ```/usr/local/sbin``` for access by root only.
+* ```/usr/local/sbin``` for access by root only.
  
