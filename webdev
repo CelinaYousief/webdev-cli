@@ -4,13 +4,12 @@
 # Author: Celina Yousief
 
 bad_arg(){
-		
-	echo "Bad Argument!"
-	echo "-------------"
-	echo "Usage: webdev -nb [params]"
-	echo "	-n <filename> <filename2> ... : New html skeleton in <filename>."
-	echo "	-nb <filename> <filename2> ... : New html skeleton using Bootstrap 4. (Coming soon)"
-	echo "	-nbj <filename> <filename2> ... : New html skeleton using Bootstrap 4 with jQuery and JavaScript"
+
+	echo "Usage: webdev <options> [params]"
+	echo "	-h : Usage and options."
+	echo "	-n <filename> <filename2> ... : New html skeleton in <filename(s)>."
+	echo "	-nb <filename> <filename2> ... : New html skeleton using Bootstrap 4 in <filename(s)>."
+	echo "	-nbj <filename> <filename2> ... : New html skeleton using Bootstrap 4 with JavaScript in <filename(s)>."
 }
 
 generate_skeleton(){
@@ -72,6 +71,10 @@ _EOF_
 
 
 case $1 in
+
+	-help|-h-|-H)
+		bad_arg
+	;;
 	
 	-new|-n|-N)
 		#create new html skeleton
@@ -85,7 +88,7 @@ case $1 in
     		generate_skeleton > $i
 			done
 		fi
-		;;
+	;;
 
 	-newb|-nb|-NB)
 		#create new html skeleton with Bootstrap
@@ -99,7 +102,7 @@ case $1 in
     		generate_boot_skeleton > $i
 			done
 		fi
-		;;
+	;;
 
 	-newbj|-nbj|-NBJ)
 		#creat new html skeleton with Bootstrap and Javascript
@@ -112,11 +115,11 @@ case $1 in
     		generate_bootj_skeleton > $i
 			done
 		fi
-		;;
+	;;
 
 	*)
 		bad_arg
-		;;
+	;;
 esac
 
 
