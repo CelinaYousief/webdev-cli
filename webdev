@@ -15,7 +15,7 @@ bad_arg(){
 generate_skeleton(){
 
 	cat << _EOF_
-<!doctype html>
+<!DOCTYPE html>
 <html lang=en>
 
 <head>
@@ -32,7 +32,7 @@ _EOF_
 
 generate_boot_skeleton(){
 	cat << _EOF_
-<!doctype html>
+<!DOCTYPE html>
 <html lang=en>
 
 <head>
@@ -50,7 +50,7 @@ _EOF_
 
 generate_bootj_skeleton(){
 	cat << _EOF_
-<!doctype html>
+<!Doctype html>
 <html lang=en>
 
 <head>
